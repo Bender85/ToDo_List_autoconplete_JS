@@ -7,7 +7,7 @@ const listIsEmptyText = document.querySelector(".list-empty");
 let todos = JSON.parse(localStorage.getItem("todoList")) || [];
 
 let addTodo = e => {
-  e.preventDefault();
+  // e.preventDefault();
   const newTitle = addInput.value;
   if (newTitle === "") {
     return;
@@ -20,7 +20,7 @@ let addTodo = e => {
 };
 
 let createList = (list = [], listTarget) => {
-  console.log(list.length);
+  // console.log(list.length);
   if (list.length) {
     listIsEmptyText.classList.add("hidden");
   }
@@ -86,3 +86,5 @@ removeList.addEventListener("click", removeData);
 
 // Init list
 createList(todos, todoList);
+
+export default addTodo;

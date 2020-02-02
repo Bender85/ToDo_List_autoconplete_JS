@@ -1,14 +1,14 @@
-const prototype = (inp, sugpannel, dataArray) => {
+const prototype = (inp, sugpannel, source) => {
   let findDo = e => {
     const input = inp.value;
     sugpannel.innerHTML = "";
 
-    const sugesstions = dataArray.filter(item => {
-      return item.name.toLowerCase().startsWith(input);
+    const sugesstions = source.filter(item => {
+      return item.toLowerCase().startsWith(input);
     });
     sugesstions.forEach(suggestedItem => {
       const li = document.createElement("li");
-      li.innerHTML = suggestedItem.name;
+      li.innerHTML = suggestedItem;
       sugpannel.appendChild(li);
     });
     if (input === "") {

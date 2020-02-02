@@ -1,4 +1,4 @@
-import { addTodo } from "./main";
+import addTodo from "./main";
 export function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -63,13 +63,13 @@ export function autocomplete(inp, arr) {
       addActive(x);
     } else if (e.keyCode === 13) {
       addActive(x);
-      addTodo();
       /*If the ENTER key is pressed, prevent the form from being submitted,*/
       e.preventDefault();
       if (currentFocus > -1) {
         /*and simulate a click on the "active" item:*/
         if (x) x[currentFocus].click();
       }
+      addTodo();
     }
   });
   function addActive(x) {
