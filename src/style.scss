@@ -50,6 +50,16 @@ body {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
+.list-empty {
+  color: red;
+  text-align: center;
+  margin-top: 50px;
+}
+
 ul.todo-list {
   margin: 0;
   padding: 0 0 0 0;
@@ -57,13 +67,13 @@ ul.todo-list {
   li {
     transition: box-shadow .20s ease;
     list-style: none;
-    box-shadow: 0 2px 15px -8px rgba(0,0,0,1);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,1);
     margin-bottom: 30px;
     word-break: break-word;
     margin: 30px 30px 0;
         
   &:hover {
-    box-shadow: 0 2px 15px -5px rgba(0,0,0,1);
+    box-shadow: 0 0 7px 0 rgba(0,0,0,1);
   }
         
   input[type="checkbox"] {

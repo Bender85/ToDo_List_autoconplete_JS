@@ -2,6 +2,7 @@ const addInput = document.getElementById("addInput");
 const todoList = document.querySelector(".todo-list");
 const todoForm = document.querySelector(".add-todo");
 const removeList = document.querySelector(".remove-List");
+const listIsEmptyText = document.querySelector(".list-empty");
 
 let todos = JSON.parse(localStorage.getItem("todoList")) || [];
 
@@ -19,6 +20,13 @@ let addTodo = e => {
 };
 
 let createList = (list = [], listTarget) => {
+  console.log(list.length);
+  if (list.length) {
+    listIsEmptyText.classList.add("hidden");
+  }
+  // if (list.length === 0) {
+  //   return `<li>List is empty</li>`;
+  // }
   listTarget.innerHTML = list
     .map((item, i) => {
       return `<li>
@@ -63,6 +71,7 @@ let removeData = () => {
   localStorage.removeItem("todoList");
   createList(todos, todoList);
   removeList.classList.add("hidden");
+  listIsEmptyText.classList.remove("hidden");
 };
 
 let showRemoveButton = () => {
