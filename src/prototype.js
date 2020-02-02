@@ -7,9 +7,9 @@ const prototype = (inp, sugpannel, source) => {
       return item.toLowerCase().startsWith(input);
     });
     sugesstions.forEach(suggestedItem => {
-      const li = document.createElement("li");
-      li.innerHTML = suggestedItem;
-      sugpannel.appendChild(li);
+      const div = document.createElement("div");
+      div.innerHTML = suggestedItem;
+      sugpannel.appendChild(div);
     });
     if (input === "") {
       sugpannel.innerHTML = "";
