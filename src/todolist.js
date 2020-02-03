@@ -11,7 +11,7 @@ const suggestions = document.querySelector(".suggestions");
 let todos = JSON.parse(localStorage.getItem("todoList")) || [];
 
 let addTodo = e => {
-  // e.preventDefault();
+  e.preventDefault();
   const newTitle = addInput.value;
   if (newTitle === "") {
     return;
@@ -24,13 +24,9 @@ let addTodo = e => {
 };
 
 let createList = (list = [], listTarget) => {
-  // console.log(list.length);
   if (list.length) {
     listIsEmptyText.classList.add("hidden");
   }
-  // if (list.length === 0) {
-  //   return `<li>List is empty</li>`;
-  // }
   listTarget.innerHTML = list
     .map((item, i) => {
       return `<li>
@@ -92,4 +88,4 @@ removeList.addEventListener("click", removeData);
 createList(todos, todoList);
 // prototype(addInput, suggestions, getList());
 autocomplete(addInput, getList());
-export default addTodo;
+// export default addTodo;

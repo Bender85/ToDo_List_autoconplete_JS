@@ -4,6 +4,7 @@ let myToDoList = [
   "go to the supermarket",
   "go to the cinema",
   "go to the concert",
+  "go to my friends",
   "do my homework",
   "clean my room",
   "read fanrtasy book"

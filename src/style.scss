@@ -27,11 +27,14 @@ body {
         
     input[type="text"] {
       width: 90%;
-      padding: 0 0 10px 0;
+      padding: 8px 0 10px 8px;
       font-size: 21px;
       border: 0;
       border-bottom: 1px solid rgba(0, 0, 0, 1);
       outline: none;
+      &:focus {
+        outline: none;
+      }
     }
     input[type="submit"] {
       font-size: 19px;
@@ -168,4 +171,18 @@ ul.todo-list {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
+}
+
+//  for prototype
+.suggestions {
+  position: absolute;
+  div {
+    background: greenyellow;
+    height: 30px;
+    line-height: 30px;
+    bottom: 120px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

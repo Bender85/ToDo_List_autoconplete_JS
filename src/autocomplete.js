@@ -1,4 +1,4 @@
-import addTodo from "./main";
+// import addTodo from "./todolist";
 export function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -70,7 +70,7 @@ export function autocomplete(inp, arr) {
         if (x) x[currentFocus].click();
       }
       // add to Todo list
-      addTodo();
+      // addTodo();
     }
   });
   function addActive(x) {

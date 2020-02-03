@@ -16,18 +16,19 @@ const prototype = (inp, sugpannel, source) => {
     }
     if (e.keyCode === 13) {
       e.preventDefault();
-      alert(e.target.value);
+      console.log();
+      // alert(e.target.value);
+      console.log(input);
     }
   };
 
   let sugesstedItem = e => {
-    console.log(this);
     inp.value = e.target.innerText;
     sugpannel.innerHTML = "";
-    sugpannel.focus();
+    inp.focus();
   };
 
-  inp.addEventListener("keyup", findDo);
   sugpannel.addEventListener("click", sugesstedItem);
+  inp.addEventListener("keyup", findDo);
 };
 export default prototype;
