@@ -57,6 +57,30 @@ body {
   display: none !important;
 }
 
+.suggestions {
+  border-top: 2px solid #252af3;
+  display: none;
+}
+.suggestions.show {
+  display: block;
+}
+.suggestions > div {
+  padding: 15px;
+  font-size: 20px;
+  color: #fff;
+  border-top: 1px solid #666;
+  cursor: pointer;
+}
+.suggestions > div:hover, .suggestions > div.selected  {
+  background-color: #1e4dd4;
+}
+.emphy {
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+  color: #fff;
+}
+
 .list-empty {
   color: red;
   text-align: center;
